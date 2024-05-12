@@ -1,4 +1,4 @@
-data "aws_ami" "ami_id" {
+data "aws_ami" "ami_info" {
 
     most_recent = true
     owners = ["973714476881"]
@@ -13,14 +13,9 @@ data "aws_ami" "ami_id" {
         values = ["ebs"]
     }
 
-    filter {
-        name = "Virtualization type"
-        values = ["hvm"]
-    }
+    #filter {
+    #    name = "Virtualization type"
+    #    values = ["hvm"]
+    #}
       
 }
-
-data "aws_vpc" "default" {
-    default = true
-}
-
