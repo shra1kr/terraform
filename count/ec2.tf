@@ -1,7 +1,7 @@
 resource "aws_instance" "db" {
     ami = "ami-090252cbe067a9e58"
     instance_type = "t2.micro"
-    vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+    vpc_security_group_ids = [aws_security_group.allow_ssh.id] 
     #count = 3
     count = length(var.instance_names)
     tags = {
@@ -26,5 +26,10 @@ resource "aws_security_group" "allow_ssh" {
         to_port          = 0
         protocol         = "-1" # -1 means all protocols
         cidr_blocks      = ["0.0.0.0/0"]
+    }
+
+    tags = {
+        Name = "allow_ssh"
+        createdby = "shravan kumar"
     }
 }
