@@ -7,7 +7,7 @@ variable "instance_names" {
 
 variable "image_id" {
   type    = string # optional
-  default = "ami-090252cbe067a9e58" # optional
+  default = "ami-09c813fb71547fc4f" # optional "ami-090252cbe067a9e58"
   description = "RHEl-9 AMI ID" # Description is optional
 }
 
@@ -58,5 +58,3 @@ variable "zone_id" {
 variable "domain_name" {
     default = "shravan.cloud"
 }
-
-
