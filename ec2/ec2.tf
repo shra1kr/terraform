@@ -1,6 +1,6 @@
 # resource <resource type> <resource name>
 resource "aws_instance" "DB" {
-    ami = "ami-09c813fb71547fc4f" #"ami-090252cbe067a9e58"#default
+    ami = "ami-09c813fb71547fc4f" #"ami-090252cbe067a9e58" #default
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]
     instance_type = "t2.micro"
     tags = {
